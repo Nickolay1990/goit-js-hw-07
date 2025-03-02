@@ -13,10 +13,11 @@ createButton.addEventListener('click', createButtonHandler);
 destroyButton.addEventListener('click', destroyBoxes);
 
 function createButtonHandler() {
-    destroyBoxes();
     const quantity = +inputQuantity.value;
     inputQuantity.value = '';
     if (quantity >= 1 && quantity <= 100) {
+        destroyBoxes();
+
         createBoxes(quantity);
     }
 }
